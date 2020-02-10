@@ -1,14 +1,10 @@
-﻿#IfWinactive, ahk_class CabinetWClass ;Makes the script active only when explorer (window) is active...
+﻿#SingleInstance force
+#IfWinactive, ahk_class CabinetWClass ;Makes the script active only when explorer (window) is active...
  
  IniRead, config, config.ini, Folders
  MsgBox %config%
  settings := StrSplit(config,"`n") 
- 
-^!f:: ;Ctrl+Alt+f hotkey...
-	
-	
-	
-	
+ 	
 	Gui, Add, Button, x27 y424 w0 h0 , Exit
 	Gui, Add, Button, x22 y49 w190 h40 gbuildbase, Build base folder
 	Gui, Add, Button, x22 y559 w190 h40 gaddstemfolder , Add stem folder
