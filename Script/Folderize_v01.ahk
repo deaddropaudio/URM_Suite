@@ -1,8 +1,7 @@
-﻿#SingleInstance force
+#SingleInstance force
 #IfWinactive, ahk_class CabinetWClass ;Makes the script active only when explorer (window) is active...
  
  IniRead, config, config.ini, Folders
- MsgBox %config%
  settings := StrSplit(config,"`n") 
  	
 	Gui, Add, Button, x27 y424 w0 h0 , Exit
